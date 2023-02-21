@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="h-100">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+</head>
+<body class="h-100" style="background-color:rgb(59, 127, 236);">
+  
+  
+  <br><br>
+  
+  <!-- <ul *ngFor="let item of list">
+    <li>{{item.name}} <button (click)="removetask(item.id)">Remove</button></li>
+  </ul>
+  <br><br> -->
+  <div class="vstack gap-2 col-md-5 mx-auto">
+    <h3 class="btn btn-outline-secondary text-warning">Prepare a Todo List</h3>
+  </div>
+
+  <div class="container text-center p-3">
+    <div class="row align-items-start">
+      <div class="col">
+        <!-- One of three columns -->
+      </div>
+      <div class="col">
+        <input type="text" name="task" class="form-control" #task placeholder="Enter new task"><br><br>
+        <button class="btn btn-info" (click)="addtask(task.value)">Add New Task</button>
+      </div>
+      <div class="col">
+        <!-- One of three columns -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center p-5">
+    <div class="row" *ngFor="let item of list">
+      <div class="col">
+        <div class="alert alert-warning" role="alert">
+          <!-- A simple warning alert—check it out! -->
+          {{item.name}}
+        </div>
+      </div>
+      <div class="col">
+          <button class="btn btn-light" (click)="removetask(item.id)">Remove</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
